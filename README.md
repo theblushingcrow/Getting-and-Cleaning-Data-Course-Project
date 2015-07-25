@@ -2,11 +2,11 @@
 
 ## Introduction
 
-The raw data used for this project is entitled "Human Activity Recognition Using Smartphones Data Set", availabe from UCI Center for Machine Learning and Intelligent Systems. 
+The raw data used for this project is entitled "Human Activity Recognition Using Smartphones Data Set", available from UCI Center for Machine Learning and Intelligent Systems. 
 
 It is a Human Activity Recognition database built from the recordings of 30 subjects performing activities of daily living (ADL) while carrying a waist-mounted smartphone with embedded inertial sensors. For more information on the raw data please see: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones as well as the raw data's README.txt file.
 
-This repository includes an R script (run_analysis.R) which, when run, generates a tidy data text file that meets the principles of tidy data in the wide form (as detailed in David Hood's tidy data post: https://class.coursera.org/getdata-030/forum/thread?thread_id=107). It includes the columns for subject, activity, and the average of the mean and standard deviation measurments for that subject/activity combination. More inforamtion on the columns is detailed in the code book, also found in this repository. 
+This repository includes an R script (run_analysis.R) which, when run, generates a tidy data text file that meets the principles of tidy data in the wide form (as detailed in David Hood's tidy data post: https://class.coursera.org/getdata-030/forum/thread?thread_id=107). It includes the columns for subject, activity, and the average of the mean and standard deviation measurements for that subject/activity combination. More information on the columns is detailed in the code book, also found in this repository. 
 
 As David Hood noted: 
 "producing a mean of the means gives you the typical measure for that particular person doing that particular activity. Producing a mean of the standard deviations gives you a measure for how much variation was there in that particular person doing that particular activity."
@@ -14,7 +14,7 @@ As David Hood noted:
 
 ## Study Design
 
-The following sction details the steps taken in order to acheive the tidy data set fromt the raw data: 
+The following section details the steps taken in order to achieve the tidy data set from the raw data: 
 
 ### 0. Download and unzip the raw data. 
 This step was added in order to assure the raw data is present (see: https://class.coursera.org/getdata-030/forum/thread?thread_id=238#post-966)
@@ -33,15 +33,15 @@ This step was added in order to assure the raw data is present (see: https://cla
 
 - The "features.txt" file is read to extract the names of the measured features. 
 - A relevant features dataset is created by filtering the features dataset and returning only feature names that contain "mean" or "std" (and their corresponding numbers). 
-- The numbers are then used to identify the relevant features' column and create a reduced set condtaining only the relevant features, the subject, and the activity. This is done via the select fuction. The resulting dataset has 2947 observations of 81 variables.
+- The numbers are then used to identify the relevant features' column and create a reduced set containing only the relevant features, the subject, and the activity. This is done via the select function. The resulting dataset has 2947 observations of 81 variables.
 
 ### 3. Use descriptive activity names to name the activities in the data set.
 
-- The "activity_labels.txt" file is read to extract the names of the measured activities. The resutling dataset is converted into a factor and used to replace the numerical entries in the reduced dataset's activity column with their corresponding names. 
+- The "activity_labels.txt" file is read to extract the names of the measured activities. The resulting dataset is converted into a factor and used to replace the numerical entries in the reduced dataset's activity column with their corresponding names. 
 
 ### 4. Appropriately label the data set with descriptive variable names.
 
-- Looping along the relevant features set created in step #2, each feature column name in the reduced set is renamed with the corresponding feature name. This is done via the rename fuction. 
+- Looping along the relevant features set created in step #2, each feature column name in the reduced set is renamed with the corresponding feature name. This is done via the rename function. 
 
 ### 5. From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject.
 
@@ -50,6 +50,6 @@ This step was added in order to assure the raw data is present (see: https://cla
 - The tidy dataset's measure variable columns are renamed to reflect the fact the they display the average of each variable. 
 
 ### 6. Reading the tidy data set 
-- The followind command was used to read the dataset: 
+- The following command was used to read the dataset: 
 write.table(tidy.set, file = "tidy.txt", row.names = FALSE)
 - The script includes a 6th step which loads the submitted tidy dataset from Coursera. This is based on a suggestion David Hood made in https://class.coursera.org/getdata-030/forum/thread?thread_id=107#post-369.
