@@ -51,7 +51,7 @@ This step was added in order to assure the raw data is present (see: https://cla
 - The resulting set is reshaped using the dcast function, displaying the subject and activity column (30 subject X 6 activities) and taking the average of each of the 79 measure variables, for each subject/activity combination. The resulting dataset has 180 observations of 81 variables.
 - The tidy dataset's measure variable columns are renamed to reflect the fact the they display the average of each variable. 
 
-### 6. Read the tidy data set 
+### 6. Read the tidy data set. 
 - The following command was used to write the dataset: 
 write.table(tidy.set, file = "tidy.txt", row.names = FALSE)
 - The script includes a 6th step which loads the submitted tidy dataset from Coursera. This is based on a suggestion David Hood made in https://class.coursera.org/getdata-030/forum/thread?thread_id=107#post-369.
