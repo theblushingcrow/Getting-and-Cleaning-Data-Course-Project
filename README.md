@@ -49,7 +49,7 @@ This step was added in order to assure the raw data is present (see: https://cla
 
 - Using the melt function, a new dataset is created with subject and activity identified as the id variables, and the additional variables identified as measure variables. The resulting dataset has 813621 observations of 4 variables.
 - The resulting set is reshaped using the dcast function, displaying the subject and activity column (30 subject X 6 activities) and taking the average of each of the 79 measure variables, for each subject/activity combination. The resulting dataset has 180 observations of 81 variables.
-- The tidy dataset's measure variable columns are renamed to reflect the fact the they display the average of each variable. 
+- The tidy dataset's measure variable columns are renamed using more readable column names (per tidy data principles) and to reflect the fact the they display the average of each variable. 
 
 ### 6. Read the tidy data set. 
 - The following command was used to write the dataset: 
