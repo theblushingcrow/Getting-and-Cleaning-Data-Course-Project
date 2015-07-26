@@ -88,7 +88,7 @@ names(tidy.set)<-gsub("  ", " ", names(tidy.set))
 # To write the data set I used: 
 # write.table(tidy.set, file = "tidy.txt", row.names = FALSE)
 # This is the code which loads the submitted tidy data set from Coursera: 
-address <- "https://s3.amazonaws.com/coursera-uploads/user-44bcf2d1d3f9b49f34e46930/975114/asst-3/818ab91032c011e5becc6d9a2fc9db10.txt"
+address <- "https://s3.amazonaws.com/coursera-uploads/user-44bcf2d1d3f9b49f34e46930/975114/asst-3/351d84a0332d11e5a1f12fb4a4ccc86d.txt"
 address <- sub("^https", "http", address)
 data <- read.table(url(address), header = TRUE) 
 View(data)
