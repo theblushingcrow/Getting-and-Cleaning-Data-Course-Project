@@ -66,10 +66,26 @@ for (index in relevant.features.length.seq) {
 #   with the average of each variable for each activity and each subject.
 molten.set <- melt(reduced.set, id=c("subject", "activity"), measure.vars = sapply(relevant.features.set$V2, as.character)) 
 tidy.set <- dcast(molten.set, subject + activity ~ variable, mean)
-names(tidy.set) <- c("subject", "activity", paste("average", sapply(relevant.features.set$V2, as.character), sep="-"))
+names(tidy.set) <- c("subject", "activity", paste("average of ", sapply(relevant.features.set$V2, as.character), sep=" "))
+names(tidy.set)<-gsub("mean\\(\\)", "mean value", names(tidy.set))
+names(tidy.set)<-gsub("std\\(\\)", "standard deviation", names(tidy.set))
+names(tidy.set)<-gsub("meanFreq\\(\\)", "weighted average of the frequency components", names(tidy.set))
+names(tidy.set)<-gsub("X", "X axis", names(tidy.set))
+names(tidy.set)<-gsub("Y", "Y axis", names(tidy.set))
+names(tidy.set)<-gsub("Z", "Z axis", names(tidy.set))
+names(tidy.set)<-gsub("BodyBody", "Body", names(tidy.set))
+names(tidy.set)<-gsub("tBody", "body time domain signals ", names(tidy.set))
+names(tidy.set)<-gsub("tGravity", "gravity time domain signals ", names(tidy.set))
+names(tidy.set)<-gsub("fBody", "body frequency domain signals ", names(tidy.set))
+names(tidy.set)<-gsub("Acc", "from accelerometer ", names(tidy.set))
+names(tidy.set)<-gsub("Gyro", "from gyroscope ", names(tidy.set))
+names(tidy.set)<-gsub("Jerk", " (linear acceleration and angular velocity derived in time)", names(tidy.set))
+names(tidy.set)<-gsub("Mag", " calculated magnitude", names(tidy.set))
+names(tidy.set)<-gsub("-", " ", names(tidy.set))
+names(tidy.set)<-gsub("  ", " ", names(tidy.set))
 
-#6. Reading the tidy data set 
-# To read the data set I used: 
+#6. Reading the tidy data set. 
+# To write the data set I used: 
 # write.table(tidy.set, file = "tidy.txt", row.names = FALSE)
 # This is the code which loads the submitted tidy data set from Coursera: 
 address <- "https://s3.amazonaws.com/coursera-uploads/user-44bcf2d1d3f9b49f34e46930/975114/asst-3/818ab91032c011e5becc6d9a2fc9db10.txt"
