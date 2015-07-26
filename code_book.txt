@@ -28,97 +28,94 @@ Check the README.txt file in the raw data zip for further details about this dat
 
 The resulting tidy dataset has 81 columns. These are: 
 
-subject - a number identifying the subject. 
+[1] subject - a number identifying the subject. 
 
 
-activity - A string describing the nature of the activity measured. In total, 6 activities were measured for each sunject: 
+[2] activity - A string describing the nature of the activity measured. In total, 6 activities were measured for each sunject: 
 
 walking, walking upstairs, walking downstairs, sitting, standing and laying. 
 
 
 
-The additional 79 variables are the average of measurements takes for each specific subject/activity combination. Each of the values used are either a mean value or a standard deviation value. All values are normalized and bounded within [-1,1].  
+The additional 79 variables are the average of measurements takes for each specific subject/activity combination. Each of the values used are either a mean value or a standard deviation value. All values are normalized and bounded within [-1,1] (the original units are not given in the raw data).  
 
 
-'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions
-accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ
-
-average-tBodyAcc-mean()-X
-average-tBodyAcc-mean()-Y
-average-tBodyAcc-mean()-Z
-average-tBodyAcc-std()-X
-average-tBodyAcc-std()-Y
-average-tBodyAcc-std()-Z
-average-tGravityAcc-mean()-X
-average-tGravityAcc-mean()-Y
-average-tGravityAcc-mean()-Z
-average-tGravityAcc-std()-X
-average-tGravityAcc-std()-Y
-average-tGravityAcc-std()-Z
-average-tBodyAccJerk-mean()-X
-average-tBodyAccJerk-mean()-Y
-average-tBodyAccJerk-mean()-Z
-average-tBodyAccJerk-std()-X
-average-tBodyAccJerk-std()-Y
-average-tBodyAccJerk-std()-Z
-average-tBodyGyro-mean()-X
-average-tBodyGyro-mean()-Y
-average-tBodyGyro-mean()-Z
-average-tBodyGyro-std()-X
-average-tBodyGyro-std()-Y
-average-tBodyGyro-std()-Z
-average-tBodyGyroJerk-mean()-X
-average-tBodyGyroJerk-mean()-Y
-average-tBodyGyroJerk-mean()-Z
-average-tBodyGyroJerk-std()-X
-average-tBodyGyroJerk-std()-Y
-average-tBodyGyroJerk-std()-Z
-average-tBodyAccMag-mean()
-average-tBodyAccMag-std()
-average-tGravityAccMag-mean()
-average-tGravityAccMag-std()
-average-tBodyAccJerkMag-mean()
-average-tBodyAccJerkMag-std()
-average-tBodyGyroMag-mean()
-average-tBodyGyroMag-std()
-average-tBodyGyroJerkMag-mean()
-average-tBodyGyroJerkMag-std()
-average-fBodyAcc-mean()-X
-average-fBodyAcc-mean()-Y
-average-fBodyAcc-mean()-Z
-average-fBodyAcc-std()-X
-average-fBodyAcc-std()-Y
-average-fBodyAcc-std()-Z
-average-fBodyAcc-meanFreq()-X
-average-fBodyAcc-meanFreq()-Y
-average-fBodyAcc-meanFreq()-Z
-average-fBodyAccJerk-mean()-X
-average-fBodyAccJerk-mean()-Y
-average-fBodyAccJerk-mean()-Z
-average-fBodyAccJerk-std()-X
-average-fBodyAccJerk-std()-Y
-average-fBodyAccJerk-std()-Z
-average-fBodyAccJerk-meanFreq()-X
-average-fBodyAccJerk-meanFreq()-Y
-average-fBodyAccJerk-meanFreq()-Z
-average-fBodyGyro-mean()-X
-average-fBodyGyro-mean()-Y
-average-fBodyGyro-mean()-Z
-average-fBodyGyro-std()-X
-average-fBodyGyro-std()-Y
-average-fBodyGyro-std()-Z
-average-fBodyGyro-meanFreq()-X
-average-fBodyGyro-meanFreq()-Y
-average-fBodyGyro-meanFreq()-Z
-average-fBodyAccMag-mean()
-average-fBodyAccMag-std()
-average-fBodyAccMag-meanFreq()
-average-fBodyBodyAccJerkMag-mean()
-average-fBodyBodyAccJerkMag-std()
-average-fBodyBodyAccJerkMag-meanFreq()
-average-fBodyBodyGyroMag-mean()
-average-fBodyBodyGyroMag-std()
-average-fBodyBodyGyroMag-meanFreq()
-average-fBodyBodyGyroJerkMag-mean()
-average-fBodyBodyGyroJerkMag-std()
-average-fBodyBodyGyroJerkMag-meanFreq()
+[3] average of body time domain signals from accelerometer mean value X axis                                                                                                                
+[4] average of body time domain signals from accelerometer mean value Y axis                                                                                                                
+[5] average of body time domain signals from accelerometer mean value Z axis                                                                                                                
+[6] average of body time domain signals from accelerometer standard deviation X axis                                                                                                        
+[7] average of body time domain signals from accelerometer standard deviation Y axis                                                                                                        
+[8] average of body time domain signals from accelerometer standard deviation Z axis                                                                                                        
+[9] average of gravity time domain signals from accelerometer mean value X axis                                                                                                            
+[10] average of gravity time domain signals from accelerometer mean value Y axis                                                                                                             
+[11] average of gravity time domain signals from accelerometer mean value Z axis                                                                                                             
+[12] average of gravity time domain signals from accelerometer standard deviation X axis                                                                                                     
+[13] average of gravity time domain signals from accelerometer standard deviation Y axis                                                                                                     
+[14] average of gravity time domain signals from accelerometer standard deviation Z axis                                                                                                     
+[15] average of body time domain signals from accelerometer (linear acceleration and angular velocity derived in time) mean value X axis                                                     
+[16] average of body time domain signals from accelerometer (linear acceleration and angular velocity derived in time) mean value Y axis                                                     
+[17] average of body time domain signals from accelerometer (linear acceleration and angular velocity derived in time) mean value Z axis                                                     
+[18] average of body time domain signals from accelerometer (linear acceleration and angular velocity derived in time) standard deviation X axis                                             
+[19] average of body time domain signals from accelerometer (linear acceleration and angular velocity derived in time) standard deviation Y axis                                             
+[20] average of body time domain signals from accelerometer (linear acceleration and angular velocity derived in time) standard deviation Z axis                                             
+[21] average of body time domain signals from gyroscope mean value X axis                                                                                                                    
+[22] average of body time domain signals from gyroscope mean value Y axis                                                                                                                    
+[23] average of body time domain signals from gyroscope mean value Z axis                                                                                                                    
+[24] average of body time domain signals from gyroscope standard deviation X axis                                                                                                            
+[25] average of body time domain signals from gyroscope standard deviation Y axis                                                                                                            
+[26] average of body time domain signals from gyroscope standard deviation Z axis                                                                                                            
+[27] average of body time domain signals from gyroscope (linear acceleration and angular velocity derived in time) mean value X axis                                                         
+[28] average of body time domain signals from gyroscope (linear acceleration and angular velocity derived in time) mean value Y axis                                                         
+[29] average of body time domain signals from gyroscope (linear acceleration and angular velocity derived in time) mean value Z axis                                                         
+[30] average of body time domain signals from gyroscope (linear acceleration and angular velocity derived in time) standard deviation X axis                                                 
+[31] average of body time domain signals from gyroscope (linear acceleration and angular velocity derived in time) standard deviation Y axis                                                 
+[32] average of body time domain signals from gyroscope (linear acceleration and angular velocity derived in time) standard deviation Z axis                                                 
+[33] average of body time domain signals from accelerometer calculated magnitude mean value                                                                                                  
+[34] average of body time domain signals from accelerometer calculated magnitude standard deviation                                                                                          
+[35] average of gravity time domain signals from accelerometer calculated magnitude mean value                                                                                               
+[36] average of gravity time domain signals from accelerometer calculated magnitude standard deviation                                                                                       
+[37] average of body time domain signals from accelerometer (linear acceleration and angular velocity derived in time) calculated magnitude mean value                                       
+[38] average of body time domain signals from accelerometer (linear acceleration and angular velocity derived in time) calculated magnitude standard deviation                               
+[39] average of body time domain signals from gyroscope calculated magnitude mean value                                                                                                      
+[40] average of body time domain signals from gyroscope calculated magnitude standard deviation                                                                                              
+[41] average of body time domain signals from gyroscope (linear acceleration and angular velocity derived in time) calculated magnitude mean value                                           
+[42] average of body time domain signals from gyroscope (linear acceleration and angular velocity derived in time) calculated magnitude standard deviation                                   
+[43] average of body frequency domain signals from accelerometer mean value X axis                                                                                                           
+[44] average of body frequency domain signals from accelerometer mean value Y axis                                                                                                           
+[45] average of body frequency domain signals from accelerometer mean value Z axis                                                                                                           
+[46] average of body frequency domain signals from accelerometer standard deviation X axis                                                                                                   
+[47] average of body frequency domain signals from accelerometer standard deviation Y axis                                                                                                   
+[48] average of body frequency domain signals from accelerometer standard deviation Z axis                                                                                                   
+[49] average of body frequency domain signals from accelerometer weighted average of the frequency components X axis                                                                         
+[50] average of body frequency domain signals from accelerometer weighted average of the frequency components Y axis                                                                         
+[51] average of body frequency domain signals from accelerometer weighted average of the frequency components Z axis                                                                         
+[52] average of body frequency domain signals from accelerometer (linear acceleration and angular velocity derived in time) mean value X axis                                                
+[53] average of body frequency domain signals from accelerometer (linear acceleration and angular velocity derived in time) mean value Y axis                                                
+[54] average of body frequency domain signals from accelerometer (linear acceleration and angular velocity derived in time) mean value Z axis                                                
+[55] average of body frequency domain signals from accelerometer (linear acceleration and angular velocity derived in time) standard deviation X axis                                        
+[56] average of body frequency domain signals from accelerometer (linear acceleration and angular velocity derived in time) standard deviation Y axis                                        
+[57] average of body frequency domain signals from accelerometer (linear acceleration and angular velocity derived in time) standard deviation Z axis                                        
+[58] average of body frequency domain signals from accelerometer (linear acceleration and angular velocity derived in time) weighted average of the frequency components X axis              
+[59] average of body frequency domain signals from accelerometer (linear acceleration and angular velocity derived in time) weighted average of the frequency components Y axis              
+[60] average of body frequency domain signals from accelerometer (linear acceleration and angular velocity derived in time) weighted average of the frequency components Z axis              
+[61] average of body frequency domain signals from gyroscope mean value X axis                                                                                                               
+[62] average of body frequency domain signals from gyroscope mean value Y axis                                                                                                               
+[63] average of body frequency domain signals from gyroscope mean value Z axis                                                                                                               
+[64] average of body frequency domain signals from gyroscope standard deviation X axis                                                                                                       
+[65] average of body frequency domain signals from gyroscope standard deviation Y axis                                                                                                       
+[66] average of body frequency domain signals from gyroscope standard deviation Z axis                                                                                                       
+[67] average of body frequency domain signals from gyroscope weighted average of the frequency components X axis                                                                             
+[68] average of body frequency domain signals from gyroscope weighted average of the frequency components Y axis                                                                             
+[69] average of body frequency domain signals from gyroscope weighted average of the frequency components Z axis                                                                             
+[70] average of body frequency domain signals from accelerometer calculated magnitude mean value                                                                                             
+[71] average of body frequency domain signals from accelerometer calculated magnitude standard deviation                                                                                     
+[72] average of body frequency domain signals from accelerometer calculated magnitude weighted average of the frequency components                                                           
+[73] average of body frequency domain signals from accelerometer (linear acceleration and angular velocity derived in time) calculated magnitude mean value                                  
+[74] average of body frequency domain signals from accelerometer (linear acceleration and angular velocity derived in time) calculated magnitude standard deviation                          
+[75] average of body frequency domain signals from accelerometer (linear acceleration and angular velocity derived in time) calculated magnitude weighted average of the frequency components
+[76] average of body frequency domain signals from gyroscope calculated magnitude mean value                                                                                                 
+[77] average of body frequency domain signals from gyroscope calculated magnitude standard deviation                                                                                         
+[78] average of body frequency domain signals from gyroscope calculated magnitude weighted average of the frequency components                                                               
+[79] average of body frequency domain signals from gyroscope (linear acceleration and angular velocity derived in time) calculated magnitude mean value                                      
+[80] average of body frequency domain signals from gyroscope (linear acceleration and angular velocity derived in time) calculated magnitude standard deviation                              
+[81] average of body frequency domain signals from gyroscope (linear acceleration and angular velocity derived in time) calculated magnitude weighted average of the frequency components
